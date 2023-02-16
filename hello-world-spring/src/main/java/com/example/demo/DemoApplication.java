@@ -21,6 +21,7 @@ public class DemoApplication {
         return String.format("Hello %s!", name);
     }
 
+    //  example of mustache template. Mustache templates files must be in src/main/resources/templates
     @GetMapping("/teste")
     public ModelAndView teste(Map<String, Object> model) {
         model.put("mensagem", "ola");
