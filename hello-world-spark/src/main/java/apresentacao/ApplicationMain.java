@@ -7,7 +7,6 @@ package apresentacao;
 
 import java.util.HashMap;
 import java.util.Map;
-import negocio.PaginaCliente;
 import spark.ModelAndView;
 import static spark.Spark.get;
 import static spark.Spark.staticFiles;
@@ -25,9 +24,8 @@ public class ApplicationMain {
         
         Map map = new HashMap();
         map.put("name", "igor");
-
         get("/hello", (rq, rs) -> new ModelAndView(map, "hello.html"), new MustacheTemplateEngine());
-        get("/", (request, response) -> new PaginaCliente().renderHTML());
+        get("/", (request, response) -> "Hello World");
     }
 
 }
